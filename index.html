@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center">
+        <h1><b>Login</b></h1>
+        <form method="post">
+            <div class="txt_field">
+                <input type="email" placeholder="email or phone" id="email" required>
+                <span></span>
+                <lable>Username</lable>
+            </div>
+            
+            <div class="txt_field">
+                <input type="password" placeholder="password" id="password" required>
+                <span></span>
+                <lable>Password</lable>
+            </div>
+            
+            <div class="pass">Forget Password</div>
+
+
+           
+            <input type="Submit" value="Login" onclick="auth()">
+            
+            <div class="signup_link">
+                <a href="#">Signup</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function auth(){
+            var email=document.getElementById('email').value;
+            var password=document.getElementById('password').value;
+
+
+        //condition for login-
+
+        if(email=='resort@gmail.com' && password==12345){
+            window.location.assign('resort.html');
+            alert("Login Successfully");
+        }
+        else{
+            alert("Invalid Credential");
+            return;
+        }
+
+        }
+    </script>
+    
+</body>
+</html>
